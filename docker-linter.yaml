@@ -1,0 +1,8 @@
+name: docker linter
+on:
+	workflow-dispatch:
+jobs:
+	haldolint:
+	runs-on: ubuntu-latest
+steps:
+-uses:
