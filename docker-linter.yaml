@@ -1,8 +1,13 @@
 name: docker linter
+
 on:
-	workflow-dispatch:
+  workflow-dispatch:
 jobs:
-	haldolint:
-	runs-on: ubuntu-latest
+  hadolint:
+  runs-on: ubuntu-latest
+
 steps:
--uses:
+- uses: actions/checkout@v3
+- uses: hadolint/hadolint-action@v3.1.0
+  with:
+    dockerfile: Dockerfile
