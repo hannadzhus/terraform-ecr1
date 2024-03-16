@@ -1,6 +1,8 @@
 name: docker-linter
 on:
   workflow_dispatch:
+  pull_request: 
+    branches: [main]
 jobs:
   hadolint: 
     runs-on: ubuntu-latest
